@@ -1,0 +1,85 @@
+{% load static %}
+
+
+<article class="portfolio" data-page="portfolio">
+
+    <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+    </header>
+
+    <section class="projects">
+
+        <ul class="filter-list">
+
+            <li class="filter-item">
+                <button class="active" data-filter-btn>Barchasi</button>
+            </li>
+
+            {% for category in portfolio.categories %}
+            <li class="filter-item">
+                <button data-filter-btn>{{ category.name }}</button>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+                <div class="select-value" data-selecct-value>Toifani tanlang</div>
+
+                <div class="select-icon">
+                    <ion-icon name="chevron-down"></ion-icon>
+                </div>
+
+            </button>
+
+            <ul class="select-list">
+
+                <li class="select-item">
+                    <button data-select-item>Barchasi</button>
+                </li>
+
+                {% for category in portfolio.categories %}
+                <li class="select-item">
+                    <button data-select-item>{{ category.name }}</button>
+                </li>
+                {% endfor %}
+
+
+            </ul>
+
+        </div>
+
+        <ul class="project-list">
+
+            {% for item in portfolio.items %}
+
+            <li class="project-item  active" data-filter-item data-category="{{ item.category.name|lower }}">
+                <a href="#">
+
+                    <figure class="project-img">
+                        <div class="project-item-icon-box">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}" loading="lazy">
+                    </figure>
+
+                    <h3 class="project-title">{{ item.title }}</h3>
+
+                    <p class="project-category">{{ item.category.name }}</p>
+
+                </a>
+            </li>
+
+            {% endfor %}
+
+
+
+        </ul>
+
+    </section>
+
+</article>

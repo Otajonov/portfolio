@@ -1,0 +1,345 @@
+{% load static %}
+
+
+
+<article class="resume" data-page="resume">
+
+    <header>
+        <h2 class="h2 article-title">Resume</h2>
+    </header>
+    
+    
+    
+    <section class="about-text">
+
+        <p>
+            O'zim haqimda maqtovlar sahifasi :) <br>
+            Bu yerdagi ko'rsatkichlar nisbiy va kamina aslida siz o'ylaganday zo'r bo'lmasligi mumkin!
+        </p>
+        
+    </section>
+    
+    
+    
+    <section class="skill">
+        
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+                	<path fill="currentColor" d="M71.68 97.22L34.74 128l36.94 30.78a12 12 0 1 1-15.36 18.44l-48-40a12 12 0 0 1 0-18.44l48-40a12 12 0 0 1 15.36 18.44m176 21.56l-48-40a12 12 0 1 0-15.36 18.44L221.26 128l-36.94 30.78a12 12 0 1 0 15.36 18.44l48-40a12 12 0 0 0 0-18.44M164.1 28.72a12 12 0 0 0-15.38 7.18l-64 176a12 12 0 0 0 7.18 15.37a11.8 11.8 0 0 0 4.1.73a12 12 0 0 0 11.28-7.9l64-176a12 12 0 0 0-7.18-15.38" />
+                </svg>
+            </div>
+
+            <h3 class="h3">IT/Dasturlash</h3>
+        </div>
+
+        <!--<h3 class="h3 skills-title">Ko'nikmalarim</h3>-->
+
+        <ul class="skills-list content-card">
+
+            {% for skill in skills %}
+
+            <li class="skills-item">
+
+                <div class="title-wrapper">
+                    <h5 class="h5">{{ skill.name }}</h5>
+                    <data value="{{ skill.percentage }}">{{ skill.percentage }}%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: {{ skill.percentage }}%;"></div>
+                </div>
+
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </section>
+    
+    <br />
+    
+    <section class="skill">
+        
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                	<path fill="currentColor" fill-rule="evenodd" d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5m-1.24 5.5h2.48L11 7.636zM5 1a.75.75 0 0 1 .75.75v1.261a25 25 0 0 1 2.598.211a.75.75 0 1 1-.2 1.487q-.33-.045-.662-.08A13 13 0 0 1 5.92 8.058q.356.456.752.873a.75.75 0 0 1-1.086 1.035A13 13 0 0 1 5 9.307a13 13 0 0 1-2.841 2.546a.75.75 0 0 1-.827-1.251A11.6 11.6 0 0 0 4.08 8.057a13 13 0 0 1-.554-.938a.75.75 0 1 1 1.323-.707l.15.271c.388-.68.708-1.405.952-2.164a24 24 0 0 0-4.1.19a.75.75 0 0 1-.2-1.487q1.28-.171 2.598-.211V1.75A.75.75 0 0 1 5 1" clip-rule="evenodd" />
+                </svg>
+            </div>
+
+            <h3 class="h3">Tillar</h3>
+        </div>
+
+        <!--<h3 class="h3 skills-title">Tillar</h3>-->
+
+        <ul class="skills-list content-card">
+
+            {% for language in languages %}
+
+            <li class="skills-item">
+
+                <div class="title-wrapper">
+                    <h5 class="h5">{{ language.name }}</h5>
+                    <data value="{{ language.percentage }}">{{ language.percentage }}%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: {{ language.percentage }}%;"></div>
+                </div>
+
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </section>
+    
+    
+    <br>
+    
+
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775" />
+                </svg>
+            </div>
+
+            <h3 class="h3">Ta'lim</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Qo'qon neft va gaz sanoati kasb-hunar kolleji</h4>
+
+                <span>2016 — 2019</span>
+
+                <p class="timeline-text">
+
+                    Kolljning "Elektr tarmoqlarini ishlatish", "Electrical Engineering" yo'nalishini imtiyozli tugatdim.
+                    O'rta maxsus elektrikman.
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Olmota Isqtisod va Statistika akademiyasi (Qozog'iston)</h4>
+
+                <span>2019 — 2020</span>
+
+                <p class="timeline-text">
+
+                    O'zbekistonda TATU ga balim yetmagach, qo'shni davlatga topshirdim, va imtihonsiz olishdi.
+                    Yo'nalishim "Axborot tizimlari".
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Toshkent Axborot Texnologiyalari Universiteti Farg'ona Filiali</h4>
+
+                <span>2020 — ...</span>
+
+                <p class="timeline-text">
+                    O'quv yilini ikkinchi yarmini TATUFF ga ko'chirib kelib davom ettirdim. O'sha yilni karantin
+                    munosabati bilan bu yerga ham imtixonsiz qabul qilishti. Ammo o'qishni tugatmay chiqib ketdim.
+                    Bunga Oliy ta'limimdan kelajagimni ko'rmaganim, va hayotimda o'zgarish qilish hohishi sabab bo'ldi.
+                    Soham "Telekomunikatsiya texnologiyalari" edi.
+                </p>
+
+            </li>
+
+        </ol>
+
+    </section>
+
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 21q-3.45 0-6.012-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12t-2.037-4.962T12 5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85 1.924t1.925 2.85T21 12t-.712 3.513t-1.925 2.85t-2.85 1.925T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z" />
+                </svg>
+            </div>
+
+            <h3 class="h3">Ish tajribam</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Elektr va Mikro Elektronika</h4>
+
+                <span>Bolalikdan — Hozirgacha</span>
+
+                <p class="timeline-text">
+                    Kollej soham bo'lishidan tashqari shaxsiy qiziqishlarim sababidan Elektronika sohasida hobby
+                    loyihalar bilan ishlab kelaman.
+                    Elektronika buyumlari, kompyuter va telefon qismlarini almashtirib muamolarini topib tuzata olaman.
+                    Qiziqishim Elektr tarmoqlarida emas asosan mikroelektronikada. Nasib qilsa maqsad oddiy dasturchi
+                    emas,
+                    yozgan kodimni qurilmalarda qanday ishlashini tushunadigan dasturchi bo'lish. Shunday ekan bu
+                    sohadagi safarim
+                    tugadi deb hisoblamayman.
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">HTML/CSS/JS va PHP/Telegram Bot dasturchisi</h4>
+
+                <span>2020 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+                    Dasturlashga ilk kirib kelishim nisbatan oson PHP tilida
+                    Telegram Bot yozish va Shared Hostinglarda ishlatish va HTML/CSS/JS da frontend yozishdan boshlandi.
+                </p>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">WordPress, WooCommerce, OpenCart</h4>
+
+                <span>2020 — 2021</span>
+
+                <p class="timeline-text">
+
+                    WordPress bilan ishlash
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Flutter/Dart dasturchisi</h4>
+
+                <span>~ 2021 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+                    Ushbu yo'nalishda iOS va MacOS ga ilova berkitib ko'rmadim. Lekin hozirgi tajribamda
+                    Flutterda State Managementdan Dart/Flutter uchun pub.dev da o'z paketlarimni chiqarishgacha yo'lni
+                    bosib o'tugatdim.
+                    O'rganishdaman. Native code bilan bog'langan pluginlar ham tayyorlash niyatidaman, nasib qilsa.
+                </p>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Xavfsizlik, RestFull API, token Auth, JWT va Oauth2</h4>
+
+                <span>~ 2022 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+                    O'rgangan hamma yo'nalishlarimda Front va Backend qismlarda xavfsizlikni ta'minlay olaman.
+                    Asosiy Authentication tizimlari bilan tanishman. Web API / Rest/RestFull API bilan ishlab kelyapman.
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Python va Pythonda Backend dasturchisi</h4>
+
+                <span>~ 2023 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+                    Ommalashib borayotgan Python tiliga qiziqishim va Django dagi Backend uchun qulayliklar Meni
+                    bu yo'nalishga olib kirgan asosiy sabablar. Hozirda Pythonda OOP darajasida kod yoza olaman.
+                    PyPi.org ga Pythonda Django uchun o'zimizni Eskiz SMS servisi uchun paket chiqarishga ulgurdim.
+                    Turli kutubxonalar yordamida Telegram Bot yozish tezligim oshdi.
+                    O'rganishdaman. Nasib qilsa Python uchun C++ bilan ulanadigan paketlar yozib chiqarish va
+                    Sun'iy Intellekt, Machine Learning sohalarida ishlash niyatidaman.
+                </p>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Linux va web server terish</h4>
+
+                <span>~ 2023 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+
+                    O'rgangan narsalarimni Productionga chiqarish uchun Linux, Nginx, Apache, SystemD va boshqa
+                    server resurslari bilan tanishib chiqdim. DNS, NS tizimlarini ishlashini tushunaman.
+                    Shular asosida Noldan server tikkalash va PHP, Python, Node.JS dagi loyihalarni domen va ssl bilan
+                    joylash, nazorat qilish qo'limdan keladi. O'rganishdaman. Nasib qilsa Kubernetes va yirik ko'lamli
+                    axborot bilan ishlashni o'rganmoqchiman.
+                </p>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Web3 / Crypto development</h4>
+
+                <span>~ 2024 — Hozirgacha</span>
+
+                <p class="timeline-text">
+
+                    Shu yildagi Notcoin to'lqini fonida ushbu sohaga qiziqib ko'rdim va kichik TonCoin oldi sotdisi
+                    bilan
+                    ishlaydigan Telegram Bot tuzib ko'rdim. Bu sohada yangiman. Kelgusida o'rganishda davom etish va
+                    nimadir
+                    qilish haqida hali bir to'xtamga kelmadim.
+                </p>
+
+            </li>
+
+
+
+        </ol>
+
+    </section>
+    
+    
+    <button class="form-btn" onclick="downloadResume()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        	<path fill="currentColor" d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m8 18v-1c0-1.33-2.67-2-4-2s-4 .67-4 2v1zm-4-8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2" />
+        </svg>
+        <span>Yuklab olish</span>
+    </button>
+    
+
+</article>
+
+
+    <script>
+        function downloadResume() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const filename = `otajonovs-web-resume-${year}.html`;
+            const element = document.createElement('a');
+            const resumeContent = document.querySelector('.resume').outerHTML;
+            const file = new Blob([resumeContent], {type: 'text/html'});
+
+            element.href = URL.createObjectURL(file);
+            element.download = filename;
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>

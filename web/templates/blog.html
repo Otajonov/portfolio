@@ -1,0 +1,54 @@
+{% load static %}
+
+
+
+
+<article class="blog" data-page="blog">
+
+    <header>
+        <h2 class="h2 article-title">Blog</h2>
+    </header>
+
+    <section class="blog-posts">
+
+        <ul class="blog-posts-list">
+
+            {% for post in blog.posts %}
+
+            <li class="blog-post-item">
+                <a href="{{ post.link }}">
+
+                    <figure class="blog-banner-box">
+                        <img src="{{ post.image.url }}" alt="{{ post.image.title }}" loading="lazy">
+                    </figure>
+
+                    <div class="blog-content">
+
+                        <div class="blog-meta">
+                            <p class="blog-category">{{ post.category.name }}</p>
+
+                            <span class="dot"></span>
+
+                            <time datetime="2022-02-23">{{ post.date }}</time>
+                        </div>
+
+                        <h3 class="h3 blog-item-title">{{ post.title }}</h3>
+
+                        <p class="blog-text">
+                            {{ post.description }}
+                        </p>
+
+                    </div>
+
+                </a>
+            </li>
+
+            {% endfor %}
+
+
+
+        </ul>
+
+    </section>
+
+</article>

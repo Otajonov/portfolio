@@ -1,0 +1,222 @@
+{% load static %}
+
+
+<article class="about  active" data-page="asosiy">
+
+
+    <header>
+        <h2 class="h2 article-title">Kamina kim?</h2>
+    </header>
+
+    <section class="about-text">
+        {% if messages %}
+        {% for message in messages %}
+            <p style="color: greenyellow;">{{ message }}</pp>
+        {% endfor %}
+        {% endif %}
+        <p>
+            Ro'zmatjon Otajon o'g'li Otajonov <br>
+            2000-yil 9-dekabrda Farg'ona viloyati O'zbekiston tumani, Quibek qishlog'ida tug'ilganman. Hozirda Farg'ona 
+            shahrida yashayman. Ota ismim Saksonbek. Hujjatlarda shunday yuritiladi.
+        </p>
+
+        <p>
+
+            2020-yildan beri dasturlashdaman. Kichik va o'rta ko'lamdagi
+            Open Source yoki tijoriy loyihalarda Backend, Python, PHP, Android, Flutter/Dart
+            dasturchisi sifatida qatnashishim mumkin. Shuningdek, istalgan murakkablikda va istalgan soha uchun
+            Desktop/Mobil ilovalar, Vebsayt va WebApp, Telegram Botlar tuzib, joylab beraman.
+
+        </p>
+    </section>
+
+
+    <!--
+      - service
+    -->
+
+    <section class="service">
+
+        <h3 class="h3 service-title">Sizga qanday foydam tegishi mumkin?</h3>
+
+        <ul class="service-list">
+
+
+            <li class="service-item">
+
+                <div class="service-icon-box">
+                    <img src="{% static 'assets/img/software.png' %}" alt="design icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Dasturchi xizmati</h4>
+
+                    <p class="service-item-text">
+                        Istalgan sohangiz, murakkablik va platforma uchun dastur, vebsayt va Telegram Bot tuzib berishim
+                        mumkin
+                    </p>
+                </div>
+
+            </li>
+
+
+            <li class="service-item">
+
+                <div class="service-icon-box">
+                    <img src="{% static 'assets/img/collaboration.png' %}" alt="Web development icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Hamkorlikda ishlash</h4>
+
+                    <p class="service-item-text">
+                        Loyihalarimda qiziqqanlaringizda qatnashishingiz uchun eshigim doim ochiq.
+                    </p>
+                </div>
+
+            </li>
+
+
+            <li class="service-item">
+
+                <div class="service-icon-box">
+                    <img src="{% static 'assets/img/invitation.png' %}" alt="mobile app icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Loyihalarga taklif qilish</h4>
+
+                    <p class="service-item-text">
+                        Meni Open Source yoki tijoriy loyihalarga dasturchi sifatida taklif qilishingiz mumkin.
+                    </p>
+                </div>
+
+            </li>
+
+            <li class="service-item">
+
+                <div class="service-icon-box">
+                    <img src="{% static 'assets/img/code-review.png' %}" alt="camera icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Dasturlashda yordam so'rash</h4>
+
+                    <p class="service-item-text">
+                        Yangi boshlagan hamkasblarimga vaqt va sharoit to'g'ri kelgan holatlarda ko'rsatma berishga
+                        tayyorman.
+                    </p>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!--
+      - testimonials
+    -->
+
+    <section class="testimonials">
+
+        <h3 class="h3 testimonials-title">Ishim yuzasidan iliq fikrlar</h3>
+
+        <ul class="testimonials-list has-scrollbar">
+
+            {% for testimonial in testimonials %}
+
+            <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+
+                    <figure class="testimonials-avatar-box">
+                        <img src="{{ testimonial.image.url }}" alt="Bekzodjon Abduxalilov" width="60"
+                            data-testimonials-avatar style="border-radius: 24%; overflow: hidden;">
+                    </figure>
+
+                    <h4 class="h4 testimonials-item-title" data-testimonials-title>{{ testimonial.name }}</h4>
+
+                    <div class="testimonials-text" data-testimonials-text>
+                        <p>{{ testimonial.message }}</p>
+                    </div>
+
+                </div>
+            </li>
+
+
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+
+    <!--
+      - testimonials modal
+    -->
+
+
+
+
+    <div class="modal-container" data-modal-container>
+
+        <div class="overlay" data-overlay></div>
+
+        <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                	<path fill="currentColor" d="M17.414 16L24 9.414L22.586 8L16 14.586L9.414 8L8 9.414L14.586 16L8 22.586L9.414 24L16 17.414L22.586 24L24 22.586z" />
+                </svg>
+            </button>
+
+            <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                    <img src="" alt="" width="80" style="border-radius: 20px;" data-modal-img>
+                </figure>
+            </div>
+
+            <div class="modal-content">
+
+                <h4 class="h3 modal-title" data-modal-title></h4>
+
+                <time datetime="2024-06-14">Aprel, 2024</time>
+
+                <div data-modal-text>
+                    <p></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!--
+      - clients
+    -->
+
+    <section class="clients">
+
+        <h3 class="h3 clients-title">Taniqli klientlar</h3>
+
+        <ul class="clients-list has-scrollbar">
+
+            {% for client in clients %}
+            <li class="clients-item">
+                <a href="{{ client.link }}">
+                    <img src="{{ client.image.url }}" alt="client logo">
+                </a>
+            </li>
+            {% endfor %}
+
+
+
+        </ul>
+
+    </section>
+
+</article>
+
